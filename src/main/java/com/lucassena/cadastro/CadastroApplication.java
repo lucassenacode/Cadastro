@@ -1,13 +1,13 @@
-package com.lucassena.exaluno;
+package com.lucassena.cadastro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExalunoApplication {
+public class CadastroApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExalunoApplication.class, args);
+		SpringApplication.run(CadastroApplication.class, args);
 	}
 
 }
