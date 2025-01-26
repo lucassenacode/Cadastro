@@ -131,7 +131,7 @@ spring.jpa.hibernate.ddl-auto=none
 ### Arquivo `system.properties`
 Adicione na raiz do projeto para compatibilidade com algumas plataformas de deploy:
 ```properties
-java.runtime.version=17
+java.runtime.version=21
 ```
 
 ---
