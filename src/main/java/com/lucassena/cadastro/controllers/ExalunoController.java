@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lucassena.cadastro.dto.ExalunoDTO;
 import com.lucassena.cadastro.dto.ExalunoMinDTO;
 import com.lucassena.cadastro.services.ExalunoService;
 
@@ -21,5 +23,12 @@ public class ExalunoController {
   public List<ExalunoMinDTO> findAll() {
     List<ExalunoMinDTO> result = exalunoService.findAll(); // Chama o serviço para buscar todos os ex-alunos
     return result; // Retorna a lista de ex-alunos como resposta
+  }
+
+  @GetMapping("/{nunQuadro}") // Mapeia requisições HTTP GET para este método
+  public ExalunoDTO findByNunQuadro(@PathVariable Integer nunQuadro) {
+    ExalunoDTO result = exalunoService.findByNunQuadro(nunQuadro); // Chama o serviço para buscar o ex-aluno pelo
+                                                                   // nunQuadro
+    return result;
   }
 }
